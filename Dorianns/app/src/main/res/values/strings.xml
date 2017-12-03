@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Dorianns</string>
+    <string name="pane_initial">Lucky numbers</string>
+    <string name="button_produce">Produce a selection</string>
 </resources>
