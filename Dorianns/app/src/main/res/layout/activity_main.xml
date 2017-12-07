@@ -5,12 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="dorian.com.dorianns.MainActivity">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pane_initial"
-        android:id="@+id/content_pane"
+        android:text="@string/pane_initial_balls"
+        android:id="@+id/content_pane_balls"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -19,10 +18,28 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_produce"
-        android:id="@+id/produce_button"
-        android:onClick="onClickProduce"
-        android:layout_below="@+id/content_pane"
-        android:layout_alignLeft="@+id/content_pane"/>
+        android:text="@string/button_produce_balls"
+        android:id="@+id/produce_balls_button"
+        android:onClick="onClickProduceBalls"
+        android:layout_below="@+id/content_pane_balls"
+        android:layout_alignLeft="@+id/content_pane_balls"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pane_initial_nums"
+        android:id="@+id/content_pane_nums"
+        android:layout_below="@+id/produce_balls_button"
+        android:layout_alignLeft="@+id/produce_balls_button"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_produce_nums"
+        android:id="@+id/produce_nums_button"
+        android:onClick="onClickProduceLucks"
+        android:layout_below="@+id/content_pane_nums"
+        android:layout_alignLeft="@+id/content_pane_nums"/>
+
 
 </RelativeLayout>
