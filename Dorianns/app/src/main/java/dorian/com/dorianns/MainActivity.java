@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        setContentView(R.layout.activity_main_grid);
     }
 
     private List<Integer> createLuckyNumbers(int max, int count) {
@@ -39,43 +40,53 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickProduceBalls(View view) {
-        TextView content = (TextView) findViewById(R.id.content_pane_balls);
+        TextView red_ball_content = (TextView) findViewById(R.id.content_pane_red_balls);
+        TextView blue_ball_content = (TextView) findViewById(R.id.content_pane_blue_balls);
 
         StringBuilder sb = new StringBuilder();
 
         List<Integer> redballs = createLuckyNumbers(33, 6);
 
         Collections.sort(redballs);
-        List<Integer> blueballs = createLuckyNumbers(16, 1);
-
 
         for (int i = 0; i < 6; i++) {
-            sb.append(redballs.get(i)).append(", ");
+            sb.append(redballs.get(i)).append(" ");
         }
+
+        red_ball_content.setText(sb.toString());
+
+        List<Integer> blueballs = createLuckyNumbers(16, 1);
+
+        sb = new StringBuilder();
 
         sb.append(blueballs.get(0));
 
-        content.setText(sb.toString());
+        blue_ball_content.setText(sb.toString());
     }
 
     public void onClickProduceLucks(View view) {
-        TextView content = (TextView) findViewById(R.id.content_pane_nums);
+        TextView head_numbers_pane = (TextView) findViewById(R.id.content_pane_head_nums);
+
+        TextView tail_numbers_pane = (TextView) findViewById(R.id.content_pane_tail_nums);
 
         StringBuilder sb = new StringBuilder();
 
         List<Integer> headnums = createLuckyNumbers(35, 5);
         Collections.sort(headnums);
-        List<Integer> tailnums = createLuckyNumbers(12, 2);
-        Collections.sort(tailnums);
 
         for (int i = 0; i < 5; i++) {
-            sb.append(headnums.get(i)).append(", ");
+            sb.append(headnums.get(i)).append(" ");
         }
 
-        sb.append(tailnums.get(0)).append(", ");
-        sb.append(tailnums.get(1));
+        head_numbers_pane.setText(sb.toString());
 
-        content.setText(sb.toString());
+        List<Integer> tailnums = createLuckyNumbers(12, 2);
+        Collections.sort(tailnums);
+        sb = new StringBuilder();
+
+        sb.append(tailnums.get(0)).append(" ").append(tailnums.get(1));
+
+        tail_numbers_pane.setText(sb.toString());
     }
 
 }

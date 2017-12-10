@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">Dorianns</string>
-    <string name="pane_initial_balls">Lucky balls</string>
+    <string name="pane_initial_balls">Totally seven balls</string>
+    <string name="pane_initial_red_balls">Six red balls</string>
+    <string name="pane_initial_blue_balls">One blue ball</string>
     <string name="button_produce_balls">Lucky balls, GO!</string>
-    <string name="pane_initial_nums">Lucky numbers</string>
+    <string name="pane_initial_nums">Totally seven numbers</string>
+    <string name="pane_initial_head_nums">Five head numbers</string>
+    <string name="pane_initial_tail_nums">Two tail numbers</string>
     <string name="button_produce_nums">Lucky numbers, GO!</string>
 </resources>

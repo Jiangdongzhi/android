@@ -1,15 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:columnCount="2"
     tools:context="dorian.com.dorianns.MainActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pane_initial_balls"
-        android:id="@+id/content_pane_balls"
+        android:text="@string/pane_initial_red_balls"
+        android:id="@+id/content_pane_red_balls"
+        android:textSize="20dp"
+        android:textColor="@color/red"
+        android:layout_row="0"
+        android:layout_column="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pane_initial_blue_balls"
+        android:id="@+id/content_pane_blue_balls"
+        android:textSize="20dp"
+        android:textColor="@color/blue"
+        android:layout_row="0"
+        android:layout_column="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -21,14 +40,33 @@
         android:text="@string/button_produce_balls"
         android:id="@+id/produce_balls_button"
         android:onClick="onClickProduceBalls"
-        android:layout_below="@+id/content_pane_balls"
-        android:layout_alignLeft="@+id/content_pane_balls"/>
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_below="@+id/content_pane_red_balls"
+        android:layout_alignLeft="@+id/content_pane_red_balls"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pane_initial_nums"
-        android:id="@+id/content_pane_nums"
+        android:text="@string/pane_initial_head_nums"
+        android:id="@+id/content_pane_head_nums"
+        android:textSize="20dp"
+        android:textColor="@color/green"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_below="@+id/produce_balls_button"
+        android:layout_alignLeft="@+id/produce_balls_button"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pane_initial_tail_nums"
+        android:id="@+id/content_pane_tail_nums"
+        android:textSize="20dp"
+        android:textColor="@color/cyan"
+        android:layout_row="2"
+        android:layout_column="1"
         android:layout_below="@+id/produce_balls_button"
         android:layout_alignLeft="@+id/produce_balls_button"/>
 
@@ -38,8 +76,10 @@
         android:text="@string/button_produce_nums"
         android:id="@+id/produce_nums_button"
         android:onClick="onClickProduceLucks"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
         android:layout_below="@+id/content_pane_nums"
         android:layout_alignLeft="@+id/content_pane_nums"/>
 
-
-</RelativeLayout>
+</GridLayout>
